@@ -1,7 +1,8 @@
-*** |  (C) 2008-2018 Potsdam Institute for Climate Impact Research (PIK),
-*** |  authors, and contributors see AUTHORS file
-*** |  This file is part of MAgPIE and licensed under GNU AGPL Version 3
-*** |  or later. See LICENSE file or go to http://www.gnu.org/licenses/
+*** |  (C) 2008-2019 Potsdam Institute for Climate Impact Research (PIK)
+*** |  authors, and contributors see CITATION.cff file. This file is part
+*** |  of MAgPIE and licensed under AGPL-3.0-or-later. Under Section 7 of
+*** |  AGPL-3.0, you are granted additional permissions described in the
+*** |  MAgPIE License Exception, version 1.0 (see LICENSE file).
 *** |  Contact: magpie@pik-potsdam.de
 
 $title magpie
@@ -13,7 +14,7 @@ $title magpie
 *' land and water and the associated consequences for sustainable development
 *' under future scenarios of rising food, energy and material demand as well
 *' as production, climate change impacts and greenhouse gas mitigation and
-*' different land related policies.
+*' different land related policies (@dietrich_magpie4).
 *'
 *' MAgPIE is a global partial equilibrium model of the land-use sector that operates
 *' in a recursive dynamic mode and incorporates spatially explicit information on
@@ -91,8 +92,8 @@ $title magpie
 
 *##################### R SECTION START (VERSION INFO) ##########################
 * 
-* Used data set: magpie4.0_default_sep18.tgz
-* md5sum: 98e158205482936e487aeb616dea5403
+* Used data set: magpie4.1_default_apr19.tgz
+* md5sum: ea3959be0d5a45cf50cfc232571dc9bd
 * Repository: /p/projects/rd3mod/mirror/rse.pik-potsdam.de/data/magpie/public
 * 
 * Used data set: additional_data_rev3.65.tgz
@@ -122,7 +123,7 @@ $title magpie
 * 
 * Regionscode: 690d3718e151be1b450b394c1064b1c5
 * 
-* Regions data revision: 4.14
+* Regions data revision: 4.18
 * 
 * lpj2magpie settings:
 * * LPJmL data folder: /p/projects/landuse/data/input/lpj_input/isimip_rcp/IPSL_CM5A_LR/rcp2p6/co2
@@ -166,7 +167,7 @@ $offlisting
 **************************MODEL SPECIFIC SCALARS********************************
 *                    Key parameters during model runs
 
-$setglobal c_timesteps  5year
+$setglobal c_timesteps  coup2100
 
 scalars
   s_use_gdx   use of gdx files                                       / 2 /
@@ -214,7 +215,6 @@ $setglobal phosphorus  off
 $setglobal awms  ipcc2006_aug16
 $setglobal ghg_policy  price_jan19
 $setglobal maccs  on_sep16
-$setglobal carbon_removal  off_sep16
 $setglobal som  off
 
 $setglobal bioenergy  1stgen_priced_dec18
