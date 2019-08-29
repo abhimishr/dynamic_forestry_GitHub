@@ -42,13 +42,7 @@ cfg$gms$optimization <- "nlp_apr17"
 cfg$force_download <- FALSE
 
 ## CO2 price runs
-co2_price_scenarios <- c("SSP2-Ref-SPA0")
 #co2_price_scenarios <- c("SSP2-Ref-SPA0","SSP2-26-SPA2")
-
-for(biodem in co2_price_scenarios){
-
-	cfg$gms$c56_pollutant_prices <- paste0(biodem,"-V15-REMIND-MAGPIE")	# def = "SSP2-Ref-SPA0-V15-REMIND-MAGPIE"
-	cfg$gms$c60_2ndgen_biodem <- biodem     														# def = "SSP2-Ref-SPA0"
 
 	for (sl_set in c(0.05)) {
 		if(sl_set == 0.05) sl_name = "SelectiveLogging"
@@ -62,4 +56,3 @@ for(biodem in co2_price_scenarios){
 		}
 		start_run(cfg=cfg,codeCheck=codeCheck)
  }
-}
