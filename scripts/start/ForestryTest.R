@@ -58,7 +58,7 @@ for(biodem in co2_price_scenarios){
 		if(cfg$gms$c56_pollutant_prices == "SSP2-26-SPA2-V15-REMIND-MAGPIE" ) {
 			cfg$title<- paste0(sl_name,"_","_CO2prices","-")
 		} else {
-			cfg$title<- paste0(sl_name,"-")
+			cfg$title<- paste0(sl_name)
 		}
 		start_run(cfg=cfg,codeCheck=codeCheck)
  }
