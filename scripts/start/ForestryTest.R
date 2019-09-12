@@ -9,7 +9,7 @@
 #### Script to MAgPIE test runs ####
 ##########################################################
 
-flag_run <- "cell"
+flag_run <- "ssOther"
 
 library(lucode)
 source("scripts/start_functions.R")
