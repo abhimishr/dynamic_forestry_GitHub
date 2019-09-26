@@ -9,7 +9,7 @@
 #### Script to MAgPIE test runs ####
 ##########################################################
 
-flag_run <- "noHeaven"
+flag_run <- "onlyPRODcost"
 
 library(lucode)
 source("scripts/start_functions.R")
