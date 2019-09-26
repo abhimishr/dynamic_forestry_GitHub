@@ -7,17 +7,11 @@
 
 *' @equations
 
-  q27_prod_wood(j2)..
-    vm_prod(j2,"wood")
+  q27_prod_timber(j2,kforestry)..
+    vm_prod(j2,kforestry)
     =e=
-    vm_prod_cell_natveg(j2,"wood") + vm_prod_cell_forestry(j2,"wood")
+    vm_prod_cell_natveg(j2,kforestry) + vm_prod_cell_forestry(j2,kforestry)
 *    + vm_prod_heaven_timber(j2,kforestry)
-    ;
-
-  q27_prod_woodfuel(j2)..
-    vm_prod(j2,"woodfuel")
-    =e=
-    vm_prod_cell_natveg(j2,"woodfuel") + vm_prod_cell_forestry(j2,"woodfuel")
     ;
 
 *' The equation above describes production of a MAgPIE timber commodity `vm_prod_timber`

@@ -7,9 +7,7 @@
 
 
 equations
-* q27_prod_timber(j,kforestry)             Cellular timber production constraint (mio. m3 per yr)
- q27_prod_wood(j)                          xx
- q27_prod_woodfuel(j)                      xx
+ q27_prod_timber(j,kforestry)             Cellular timber production constraint (mio. m3 per yr)
 * q27_prod_timber_reg(i,kforestry)         Regional timber production constraint (mio. m3 per yr)
 * q27_prod_forestry_ratio                  Global forestry production constraint (mio. m3 per yr)
 * q27_prod_natveg_ratio                    Global natveg production constraint (mio. m3 per yr)
@@ -22,8 +20,7 @@ positive variables
 $offtext
 *#################### R SECTION START (OUTPUT DECLARATIONS) ####################
 parameters
- oq27_prod_wood(t,j,type)     xx
- oq27_prod_woodfuel(t,j,type) xx
+ oq27_prod_timber(t,j,kforestry,type) Cellular timber production constraint (mio. m3 per yr)
 ;
 *##################### R SECTION END (OUTPUT DECLARATIONS) #####################
 
