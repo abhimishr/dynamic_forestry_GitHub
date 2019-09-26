@@ -9,7 +9,7 @@
 #### Script to MAgPIE test runs ####
 ##########################################################
 
-flag_run <- "highMGMT_FixESTB"
+flag_run <- "highMGMT"
 
 library(lucode)
 source("scripts/start_functions.R")
