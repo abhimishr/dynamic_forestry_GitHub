@@ -9,7 +9,7 @@
 #### Script to MAgPIE test runs ####
 ##########################################################
 
-flag_run <- "no_clearing_cost"
+flag_run <- "regConstr"
 
 library(lucode)
 source("scripts/start_functions.R")
