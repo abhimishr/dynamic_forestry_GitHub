@@ -82,7 +82,7 @@ p32_yield_forestry_ac(j,ac_sub) =
    (
      (2)
      *
-     pm_carbon_density_ac(t,j,ac_sub,"vegc") * p32_management_factor(j)
+     p32_carbon_density_ac(t,j,"plant",ac_sub,"vegc")
      *
      0.85
      /

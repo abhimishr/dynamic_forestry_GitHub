@@ -19,7 +19,6 @@ q32_cost_total(i2) .. vm_cost_fore(i2) =e=
                      v32_cost_harvest(i2)
 								   + v32_cost_recur(i2)
 								   + v32_cost_establishment(i2)
-                   + v32_high_mgmt_prod_cost(i2)
 *                   + sum((cell(i2,j2),kforestry), vm_prod_heaven_timber(i2,kforestry) * 10e9)
 								   ;
 
@@ -146,16 +145,5 @@ q32_prod_forestry(j2,kforestry)..
                           =e=
                          sum((ac_sub,ct), v32_hvarea_forestry(j2,kforestry,ac_sub) * p32_yield_forestry_ac(j2,ac_sub))
                          ;
-
-*********************************************************
-**** Parametrised TAU for plantations
- q32_management_incr_cost(i2) ..
-                              v32_high_mgmt_prod_cost(i2)
-                              =e=
-                              0
-*                              sum((cell(i2,j2),kforestry,ac_sub), v32_hvarea_forestry(j2,kforestry,ac_sub,"high") * p32_yield_forestry_ac(j2,ac_sub,"high")) * 10e4
-                              ;
-
-
 
 *** EOF equations.gms ***

@@ -51,7 +51,6 @@ positive variables
  v32_land_expansion(j,type32,ac)                    Land expansion (mio. ha)
  v32_land_reduction(j,type32,ac)                    land reduction (mio. ha)
  v32_cost_establishment(i)                          Cost of establishment calculated at the current time step (mio. USD)
- v32_high_mgmt_prod_cost(i)                        Very high costs for increasing managemnt factors
  vm_prod_cell_forestry(j,kforestry)                 xx
  ;
 
@@ -71,9 +70,6 @@ equations
  q32_land_expansion(j,type32,ac)                  Land expansion (mio. ha)
  q32_land_reduction(j,type32,ac)                  Land contarction (mio. ha)
  q32_cost_establishment(i)                        Present value of cost of establishment (mio. USD)
- q32_management_incr_cost(i)                       xxxx
-* q32_prod_cell_forestry(j,kforestry)               xx
-* q32_prod_forestry_glo                            xx
 ;
 
 
@@ -89,7 +85,6 @@ parameters
  ov32_land_expansion(t,j,type32,ac,type)         Land expansion (mio. ha)
  ov32_land_reduction(t,j,type32,ac,type)         land reduction (mio. ha)
  ov32_cost_establishment(t,i,type)               Cost of establishment calculated at the current time step (mio. USD)
- ov32_high_mgmt_prod_cost(t,i,type)              Very high costs for increasing managemnt factors
  ov_prod_cell_forestry(t,j,kforestry,type)       xx
  oq32_cost_total(t,i,type)                       total forestry costs constraint (mio. USD)
  oq32_land(t,j,type)                             land constraint (mio. ha)
@@ -106,6 +101,5 @@ parameters
  oq32_land_expansion(t,j,type32,ac,type)         Land expansion (mio. ha)
  oq32_land_reduction(t,j,type32,ac,type)         Land contarction (mio. ha)
  oq32_cost_establishment(t,i,type)               Present value of cost of establishment (mio. USD)
- oq32_management_incr_cost(t,i,type)             xxxx
 ;
 *##################### R SECTION END (OUTPUT DECLARATIONS) #####################

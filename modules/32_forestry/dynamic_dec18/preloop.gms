@@ -71,5 +71,4 @@ pm_production_ratio_ext(i,t_ext) = f32_production_ratio(i,"y2100");
 pm_production_ratio_ext(i,t_all) = f32_production_ratio(i,t_all);
 
 p32_management_factor(j) = sum(cell(i,j),f32_forestry_management(i));
-*p32_management_factor(j,"high") = p32_management_factor(j,"normal") * 20;
 **************************************************************************
