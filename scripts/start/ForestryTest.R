@@ -9,7 +9,7 @@
 #### Script to MAgPIE test runs ####
 ##########################################################
 
-flag_run <- "onlyPRODcost"
+flag_run <- "2eqn27"
 
 library(lucode)
 source("scripts/start_functions.R")

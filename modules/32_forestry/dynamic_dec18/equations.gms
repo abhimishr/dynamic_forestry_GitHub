@@ -16,14 +16,10 @@
 *' as costs for technological change [13_tc] or land expansion [39_landconversion].
 
 q32_cost_total(i2) .. vm_cost_fore(i2) =e=
-*                     v32_cost_harvest(i2)
-*								   + v32_cost_recur(i2)
-*								   +
-                    v32_cost_establishment(i2)
-                    +
-                    sum((cell(i2,j2),kforestry,ac_sub), v32_hvarea_forestry(j2,kforestry,ac_sub,"normal") * p32_yield_forestry_ac(j2,ac_sub,"normal")) * 10e3
-                    +
-                    v32_high_mgmt_prod_cost(i2)
+                     v32_cost_harvest(i2)
+								   + v32_cost_recur(i2)
+								   + v32_cost_establishment(i2)
+                   + v32_high_mgmt_prod_cost(i2)
 *                   + sum((cell(i2,j2),kforestry), vm_prod_heaven_timber(i2,kforestry) * 10e9)
 								   ;
 

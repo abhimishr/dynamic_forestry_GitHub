@@ -69,8 +69,7 @@
 *******************************************************************************
 ** Natveg related production costs
 q35_cost_total(i2) .. vm_cost_natveg(i2) =e=
-*                     v35_cost_harvest(i2)
-                    sum(cell(i2,j2),  vm_prod_cell_natveg(j2,"wood") * 10e3 + vm_prod_cell_natveg(j2,"woodfuel") * 10e2)
+                     v35_cost_harvest(i2)
 *								   + sum((cell(i2,j2),kforestry), v35_prod_external(j2,kforestry) * 99999)
 								   ;
 *******************************************************************************
