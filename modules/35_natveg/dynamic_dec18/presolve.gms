@@ -145,3 +145,7 @@ pcm_carbon_stock(j,"other",ag_pools) =
 
 p35_min_forest(t,j)$(p35_min_forest(t,j) > vm_land.l(j,"primforest") + vm_land.l(j,"secdforest")) = vm_land.l(j,"primforest") + vm_land.l(j,"secdforest");
 p35_min_other(t,j)$(p35_min_other(t,j) > vm_land.l(j,"other")) = vm_land.l(j,"other");
+
+** Set production bounds
+vm_prod_cell_natveg.lo(j,kforestry) = 0;
+vm_prod_cell_natveg.up(j,kforestry) = 300;

@@ -100,4 +100,8 @@ pm_rotation_reg(t,i) = ord(t) + ceil((sum(cell(i,j),pcm_land(j,"forestry")*pm_ro
 pc32_yield_forestry_future(j) = sum(ac_sub$(ord(ac_sub) = p32_rotation_cellular_estb(t,j)), p32_yield_forestry_ac(j,ac_sub,"normal"));
 
 pc32_timestep = ord(t);
+
+** Set production bounds
+vm_prod_cell_forestry.lo(j,kforestry) = 0;
+vm_prod_cell_forestry.up(j,kforestry) = 300;
 *** EOF presolve.gms ***
