@@ -120,7 +120,7 @@ q32_cost_recur(i2) .. v32_cost_recur(i2) =e=
 q32_cost_harvest(i2)..
                     v32_cost_harvest(i2)
                     =e=
-                    sum((cell(i2,j2), kforestry, ac_sub), v32_hvarea_forestry(j2,kforestry,ac_sub,"normal")) * fm_harvest_cost_ha(i2)
+                    sum((cell(i2,j2), kforestry, ac_sub), v32_hvarea_forestry(j2,kforestry,ac_sub)) * fm_harvest_cost_ha(i2)
                     ;
 
 *********************************************************
@@ -135,7 +135,7 @@ q32_prod_future(i2) ..
 *********************************************************
 *** harvested AREA
 q32_hvarea_forestry(j2,ac_sub) ..
-                          sum((kforestry,mgmt_type), v32_hvarea_forestry(j2,kforestry,ac_sub,mgmt_type))
+                          sum(kforestry, v32_hvarea_forestry(j2,kforestry,ac_sub))
                           =e=
                           (pc32_land(j2,"plant",ac_sub) - v32_land(j2,"plant",ac_sub));
 
@@ -144,7 +144,7 @@ q32_hvarea_forestry(j2,ac_sub) ..
 q32_prod_forestry(j2,kforestry)..
                           vm_prod_cell_forestry(j2,kforestry)
                           =e=
-                         sum((ac_sub,ct,mgmt_type), v32_hvarea_forestry(j2,kforestry,ac_sub,mgmt_type) * p32_yield_forestry_ac(j2,ac_sub,mgmt_type))
+                         sum((ac_sub,ct), v32_hvarea_forestry(j2,kforestry,ac_sub) * p32_yield_forestry_ac(j2,ac_sub))
                          ;
 
 *********************************************************
@@ -152,7 +152,8 @@ q32_prod_forestry(j2,kforestry)..
  q32_management_incr_cost(i2) ..
                               v32_high_mgmt_prod_cost(i2)
                               =e=
-                              sum((cell(i2,j2),kforestry,ac_sub), v32_hvarea_forestry(j2,kforestry,ac_sub,"high") * p32_yield_forestry_ac(j2,ac_sub,"high")) * 10e4
+                              0
+*                              sum((cell(i2,j2),kforestry,ac_sub), v32_hvarea_forestry(j2,kforestry,ac_sub,"high") * p32_yield_forestry_ac(j2,ac_sub,"high")) * 10e4
                               ;
 
 
